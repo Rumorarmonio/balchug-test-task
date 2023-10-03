@@ -2,12 +2,10 @@
 :root {
     font: 400 16px 'Exo 2';
     scroll-behavior: smooth;
-    --main-width: 1738px;
-    --popup-width: 295px;
     --light-green: #9FE870;
     --green: #9FE8704D;
     --dark-green: #163300;
-    --transparent-black: rgba(0, 0, 0, 0.8);
+    --noir: #6F6F6F;
 }
 
 *,
@@ -32,11 +30,6 @@
 
 .page__container {
     width: 100%;
-    max-width: var(--main-width);
-}
-
-.page__container_image {
-    min-width: 100%;
     padding-top: 20px;
 }
 
@@ -51,7 +44,7 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    max-width: var(--main-width);
+    max-width: 1738px;
     min-height: 151px;
     margin: 0 auto -171px;
 }
@@ -104,6 +97,7 @@
     padding: 13px 25px;
     margin-right: 28px;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .header__socials {
@@ -322,4 +316,99 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+/*sidebar*/
+#side-checkbox {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    right: -770px;
+    background: #FFFFFF;
+    transition: all 0.5s;
+    width: 730px;
+    height: 100%;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.4);
+    padding: 64px 85px;
+}
+
+#side-checkbox:checked + .sidebar {
+    right: 0;
+}
+
+.sidebar__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 11px;
+}
+
+.sidebar__close {
+    cursor: pointer;
+    background-color: var(--dark-green);
+    padding: 9px 17px;
+    border-radius: 30px;
+    align-self: flex-start;
+}
+
+.sidebar__title {
+    width: 400px;
+    font-size: 40px;
+    line-height: 40px;
+    color: var(--dark-green);
+}
+
+.sidebar__text {
+    color: var(--noir);
+    font-size: 15px;
+    line-height: 23px;
+    margin-bottom: 27px;
+}
+
+.sidebar__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar__input {
+    padding: 20px 30px;
+    border: 1px solid var(--noir);
+    border-radius: 10px;
+    color: var(--noir);
+}
+
+.sidebar__button {
+    margin-top: 5px;
+    padding: 23px;
+    border: 0;
+    border-radius: 10px;
+    background-color: var(--light-green);
+    color: var(--dark-green);
+    font-size: 18px;
+}
+
+.sidebar__checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sidebar__checkbox-description {
+    font-size: 15px;
+    color: var(--noir);
+}
+
+.sidebar__checkbox {
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+}
+
+.sidebar__link {
+    color: var(--noir);
+    text-decoration: underline;
 }

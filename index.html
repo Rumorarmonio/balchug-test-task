@@ -17,14 +17,13 @@
     <script src="js/libs/inputmask.min.js" defer></script>
     <script src="js/libs/just-validate.production.min.js" defer></script>
     <!--    js scripts-->
-    <script src="js/scripts/sliders.js" defer></script>
-    <script src="js/scripts/modal.js" defer></script>
+    <script src="js/scripts/slider.js" defer></script>
     <script src="js/scripts/form.js" defer></script>
     <script src="js/scripts/dropdown.js" defer></script>
 </head>
 
 <body class="page">
-<div class="page__container page__container_image">
+<div class="page__container">
     <header class="header">
         <nav class="header__navigation">
             <ul class="menu header__menu">
@@ -91,7 +90,9 @@
         <div class="header__right">
             <a class="header__telephone" href="tel:+73912141244">+7 3912 14 12 44</a>
 
-            <a class="header__button" href="#">обратный звонок</a>
+            <label class="header__button" for="side-checkbox">
+                обратный звонок
+            </label>
 
             <ul class="header__socials socials">
                 <li class="socials__item socials__item_active">
@@ -180,6 +181,29 @@
             </div>
         </div>
     </section>
+</div>
+
+<input type="checkbox" id="side-checkbox"/>
+
+<div class="sidebar">
+    <div class="sidebar__top">
+        <h3 class="sidebar__title">Заявка <br/> на обратный звонок</h3>
+        <label class="sidebar__close" for="side-checkbox">
+            <img src="img/svg/cross.svg"/>
+        </label>
+    </div>
+    <p class="sidebar__text">
+        Свяжемся с вами в течение рабочего дня <br/> и дадим обратную связь
+    </p>
+    <form class="sidebar__form">
+        <input class="sidebar__input" type="text" placeholder="Ваше имя" name="Name">
+        <input class="sidebar__input" type="text" placeholder="Телефон" name="Name">
+        <button class="sidebar__button" type="submit">Отправить заявку</button>
+        <div class="sidebar__checkbox-container">
+            <input class="sidebar__checkbox" type="checkbox" id="check" name="check"/>
+            <label class="sidebar__checkbox-description" for="check">Я ознакомился с <a class="sidebar__link" href="#">политикой конфиденциальности</a> и принимаю её</label>
+        </div>
+    </form>
 </div>
 
 </body>
