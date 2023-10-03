@@ -20,6 +20,7 @@
     <script src="js/scripts/sliders.js" defer></script>
     <script src="js/scripts/modal.js" defer></script>
     <script src="js/scripts/form.js" defer></script>
+    <script src="js/scripts/dropdown.js" defer></script>
 </head>
 
 <body class="page">
@@ -27,11 +28,46 @@
     <header class="header">
         <nav class="header__navigation">
             <ul class="menu header__menu">
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Проживание</a>
+                <li class="menu__item dropdown" data-dropdown>
+                    <button class="dropdown__heading menu__link" data-dropdown-button>
+                        Проживание
+                        <img class="menu__arrow" src="img/svg/arrow.svg" alt="arrow.svg"/>
+                    </button>
+                    <div class="dropdown__menu">
+                        <div class="dropdown__links">
+                            <a href="#" class="dropdown__link">Гостевой дом</a>
+                            <a href="#" class="dropdown__link">Номер «Tripple Room»</a>
+                            <a href="#" class="dropdown__link">Апартаменты</a>
+                            <a href="#" class="dropdown__link">Дом «Комфорт плюс» 1</a>
+                            <a href="#" class="dropdown__link">Дом «Комфорт плюс» 2</a>
+                            <a href="#" class="dropdown__link">Дома «Комфорт» 3,4</a>
+                            <a href="#" class="dropdown__link">Дом «Комфорт плюс» 5</a>
+                            <a href="#" class="dropdown__link">Дома «Комфорт плюс» 6-10</a>
+                            <a href="#" class="dropdown__link">Дом Рыбака</a>
+                        </div>
+                    </div>
                 </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Отдых</a>
+                <li class="menu__item dropdown" data-dropdown>
+                    <button class="dropdown__heading menu__link" data-dropdown-button>
+                        Отдых
+                        <img class="menu__arrow" src="img/svg/arrow.svg" alt="arrow.svg"/>
+                    </button>
+                    <div class="dropdown__menu">
+                        <div class="dropdown__links">
+                            <a href="#" class="dropdown__link">Банкетный зал</a>
+                            <a href="#" class="dropdown__link">Баня</a>
+                            <a href="#" class="dropdown__link">Бассейн</a>
+                            <a href="#" class="dropdown__link">Беседки</a>
+                            <a href="#" class="dropdown__link">Конные прогулки</a>
+                            <a href="#" class="dropdown__link">Массаж</a>
+                            <a href="#" class="dropdown__link">Рыбалка</a>
+                            <a href="#" class="dropdown__link">Игровая комната</a>
+                            <a href="#" class="dropdown__link">Игровой сервис</a>
+                            <a href="#" class="dropdown__link">Летний и зимний инвентарь</a>
+                            <a href="#" class="dropdown__link">Животный мир</a>
+                            <a href="#" class="dropdown__link">Экскурсии</a>
+                        </div>
+                    </div>
                 </li>
                 <li class="menu__item">
                     <a href="#" class="menu__link">Мероприятия</a>
@@ -46,39 +82,6 @@
                     <a href="#" class="menu__link">Ещё +</a>
                 </li>
             </ul>
-
-            <details class="popup-menu">
-                <summary class="popup-menu__summary">
-                    <a class="popup-menu__button">
-                        <img class="popup-button-img" src="img/svg/menu-icon.svg" alt="menu-icon.svg">
-                    </a>
-                </summary>
-                <ul class="popup-menu__list hide-popup">
-                    <li class="popup-menu__item">
-                        <a class="popup-menu__logo" href="#">
-                            <img class="popup-menu__image" src="img/png/header-logo.png" alt="header-logo">
-                        </a>
-                    </li>
-                    <li class="popup-menu__item">
-                        <a class="popup-menu__link" href="#service">À la carte</a>
-                    </li>
-                    <li class="popup-menu__item">
-                        <a class="popup-menu__link" href="#service">Wijnkaart</a>
-                    </li>
-                    <li class="popup-menu__item">
-                        <a class="popup-menu__link" href="#service">Lunchmenu</a>
-                    </li>
-                    <li class="popup-menu__item">
-                        <a class="popup-menu__link" href="#contacts">Contact</a>
-                    </li>
-                    <li class="popup-menu__item">
-                        <div class="popup-menu__telephone">
-                            <img class="popup-menu__telephone-icon" src="img/png/call-calling.png" alt="telephone">
-                            <a class="popup-menu__telephone-number" href="tel:+3292825725">+32 9 282 57 25</a>
-                        </div>
-                    </li>
-                </ul>
-            </details>
         </nav>
 
         <a class="header__logo" href="#">
@@ -123,8 +126,8 @@
         <div class="intro__right">
             <div class="intro__video-container">
                 <div class="intro__preview preview">
-                    <img class="preview__video" src="img/gif/demo.gif"/>
-                    <img class="preview__arrow" src="img/svg/arrow-play.svg"/>
+                    <img class="preview__video" src="img/gif/demo.gif" alt="demo.gif"/>
+                    <img class="preview__arrow" src="img/svg/arrow-play.svg" alt="arrow-play.svg"/>
                 </div>
                 <a class="intro__button" href="#">Выбрать номер</a>
             </div>
