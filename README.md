@@ -1,0 +1,1 @@
+# [Figma template link](https://www.figma.com/file/GVFJlgJO741eiq646zD1o6/%D0%AD%D0%BA%D0%BE-%D0%BF%D0%B0%D1%80%D0%BA-%D0%91%D0%B0%D0%BB%D1%87%D1%83%D0%B3?type=design&node-id=0%3A1&mode=design&t=l02mL9eiOIhAYYDM-1)
