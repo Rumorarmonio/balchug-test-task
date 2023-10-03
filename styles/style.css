@@ -21,6 +21,7 @@
 
 /* base container for all page content */
 .page {
+    width: 100%;
     display: flex;
     min-width: 333px;
     align-items: center;
@@ -34,6 +35,8 @@
 }
 
 .swiper {
+    width: 100%;
+    max-width:1920px;
     z-index: -1;
     margin-bottom: -194px;
 }
@@ -98,6 +101,10 @@
     margin-right: 28px;
     font-size: 15px;
     cursor: pointer;
+}
+
+.header__button:hover {
+    background-color: var(--green);
 }
 
 .header__socials {
