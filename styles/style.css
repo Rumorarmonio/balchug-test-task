@@ -381,7 +381,12 @@
     gap: 20px;
 }
 
+.sidebar__label {
+    width: 100%;
+}
+
 .sidebar__input {
+    width: 100%;
     padding: 20px 30px;
     border: 1px solid var(--noir);
     border-radius: 10px;
