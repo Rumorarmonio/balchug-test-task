@@ -1,3 +1,22 @@
+/*animations*/
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 /* variables */
 :root {
     font: 400 16px 'Exo 2';
@@ -36,7 +55,7 @@
 
 .swiper {
     width: 100%;
-    max-width:1920px;
+    max-width: 1920px;
     z-index: -1;
     margin-bottom: -194px;
 }
@@ -93,6 +112,17 @@
     align-self: start;
 }
 
+.header__telephone {
+    margin-right: 28px;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 15px;
+}
+
+.header__telephone:hover {
+    color: var(--light-green);
+}
+
 .header__button {
     color: #fff;
     border: 1px solid var(--green);
@@ -140,15 +170,77 @@
     width: 21px;
 }
 
-.header__telephone {
-    margin-right: 28px;
-    text-decoration: none;
-    color: #FFF;
-    font-size: 15px;
+.header__burger {
+    display: none;
+    padding: 10px 15px;
+    background-color: var(--light-green);
+    border-radius: 27px;
+    cursor: pointer;
 }
 
-.header__telephone:hover {
-    color: var(--light-green);
+@media (max-width: 1420px) {
+    .header__logo {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1325px) {
+    .header {
+        padding: 0 15px;
+    }
+
+    .header__navigation {
+        display: none;
+    }
+
+    .header__logo {
+        align-self: flex-start;
+    }
+
+    .header__logo-image {
+        width: 70px;
+        height: 58px;
+    }
+
+    .header__socials {
+        margin-right: 20px;
+    }
+
+    .header__burger {
+        display: block;
+    }
+}
+
+@media (max-width: 750px) {
+    .header__telephone {
+        font-size: 13px;
+        margin-right: 10px;
+    }
+
+    .header__button {
+        margin-right: 10px;
+        font-size: 13px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 660px) {
+    .header__telephone {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .header__button {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .header__logo-image {
+        width: 45px;
+        height: 37px;
+    }
 }
 
 /*intro*/
@@ -158,6 +250,11 @@
     max-width: 1472px;
     display: flex;
     gap: 126px;
+    flex-wrap: wrap;
+}
+
+.intro__left {
+    animation: .5s ease-out 0s 1 slideInFromLeft;
 }
 
 .intro__title {
@@ -180,12 +277,20 @@
     padding-left: 5px;
 }
 
+.intro__right {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    flex-wrap: wrap;
+    animation: .5s ease-out 0s 1 slideInFromRight;
+}
+
 .intro__video-container {
     width: 592px;
     height: 130px;
     background-color: #FFFFFF;
     border-radius: 77px;
-    margin: 115px 0 73px;
+    margin: 115px 0 0;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -263,6 +368,97 @@
     font-style: italic;
     font-weight: 400;
     line-height: 25px;
+    color: var(--light-green);
+}
+
+@media (max-width: 1350px) {
+    .intro {
+        flex-direction: column;
+        gap: 29px;
+        padding: 0 18px;
+    }
+
+    .intro__video-container {
+        margin: 0;
+    }
+
+    .intro__right {
+        flex-direction: row;
+    }
+
+    .swiper {
+        margin-bottom: -182px;
+        height: 637px;
+    }
+}
+
+@media (max-width: 750px) {
+    .intro {
+        gap: 38px;
+    }
+
+    .intro__title {
+        font-size: 70px;
+        line-height: 70px;
+        margin-bottom: 20px;
+    }
+
+    .swiper {
+        height: 543px;
+        margin-bottom: -133px;
+    }
+
+    .intro__right {
+        gap: 38px;
+    }
+}
+
+@media (max-width: 630px) {
+    .intro {
+        gap: 24px;
+    }
+
+    .intro__video-container {
+        height: 155px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    .preview__video {
+        width: 100%;
+        height: 80px;
+        border-radius: 20px;
+    }
+
+    .intro__button {
+        margin: 0;
+        width: 100%;
+        padding: 16px 42px;
+        background-color: var(--light-green);
+        color: var(--dark-green);
+        text-align: center;
+    }
+}
+
+@media (max-width: 484px) {
+    .swiper {
+        height: 358px;
+        margin-bottom: -77px;
+    }
+
+    .intro__title {
+        width: 200px;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .intro__text {
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 
 /*dropdown*/
@@ -423,4 +619,100 @@
 .sidebar__link {
     color: var(--noir);
     text-decoration: underline;
+}
+
+@media (max-width: 1325px) {
+    .sidebar {
+        width: 360px;
+        padding: 20px;
+    }
+}
+
+/*sidebar menu*/
+#side-menu {
+    display: none;
+}
+
+#side-menu:checked + .sidebar-menu {
+    right: 0;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    right: -770px;
+    background: #FFFFFF;
+    transition: all 0.5s;
+    width: 730px;
+    height: 100%;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.4);
+    padding: 64px 85px;
+}
+
+.sidebar__top_menu {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.sidebar-menu__close {
+    cursor: pointer;
+    background-color: var(--dark-green);
+    padding: 9px 17px;
+    border-radius: 30px;
+    align-self: center;
+}
+
+.sidebar-menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-bottom: 47px;
+}
+
+.sidebar-menu__item {
+    text-align: center;
+}
+
+.sidebar-menu__link {
+    color: var(--dark-green);
+}
+
+.sidebar-menu__telephone {
+    color: var(--dark-green);
+    font-size: 24px;
+    margin-bottom: 23px;
+}
+
+.header__button_sidebar {
+    margin: 0 0 30px;
+    padding: 13px 25px;
+    color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.socials {
+    display: flex;
+    gap: 5px;
+}
+
+.socials__item_big {
+    border-color: var(--dark-green);
+    width: 80px;
+    height: 80px;
+}
+
+.socials__image_big {
+    width: 35px;
+    filter: brightness(0) saturate(100%) invert(16%) sepia(26%) saturate(1784%) hue-rotate(50deg) brightness(100%) contrast(104%);
+}
+
+@media (max-width: 1325px) {
+    .sidebar-menu {
+        width: 360px;
+        padding: 20px;
+    }
 }
