@@ -468,17 +468,23 @@
     font-size: 15px;
 }
 
-.menu__arrow {
-    margin-left: 4px;
-    margin-top: 2px;
-}
-
 .dropdown__link:hover {
     color: var(--light-green);
 }
 
 .dropdown.active {
     text-decoration: underline;
+}
+
+.menu__arrow {
+    margin-left: 4px;
+    margin-top: 2px;
+    transition-duration: .4s;
+}
+
+.menu__arrow.active {
+    transform: rotateX(180deg);
+    transition-duration: .4s;
 }
 
 .dropdown {
