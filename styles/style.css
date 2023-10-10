@@ -42,7 +42,7 @@
 .page {
     width: 100%;
     display: flex;
-    min-width: 333px;
+    /*min-width: 333px;*/
     align-items: center;
     flex-direction: column;
     background-color: var(--dark-green);
